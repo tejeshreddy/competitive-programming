@@ -1,6 +1,6 @@
 """
 Title: 0021 - Merge Two Sorted Lists
-Tags: Linked Lisr
+Tags: Linked List
 Time: O(n)
 Space: O(1)
 Source: https://leetcode.com/problems/merge-two-sorted-lists/
