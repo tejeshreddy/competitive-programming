@@ -13,21 +13,3 @@ class Solution:
                     print(r, c, grid[r][c])
                     max_square = max(max_square, grid[r][c])
         return max_square ** 2
-#         max_square = 0
-        
-#         def bfs(r, c):
-#             q = deque[(r, c)]
-#             square = 1
-            
-            
-        
-        
-#         for r in range(rows):
-#             for c in range(cols):
-#                 if matrix[r][c] == 1:
-#                     bfs(r, c)
-        
-        
-        
-        
-        
