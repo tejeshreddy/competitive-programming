@@ -19,7 +19,6 @@ class Solution:
                     heapq.heappush(minHeap, (t + w2, n2))
         
         return t if len(visited) == n else -1
-    
             
             
         
