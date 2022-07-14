@@ -1,16 +1,15 @@
-# Tree Guid
 
-## Binary Tree
+# Binary Tree
 
-### Taking Input
+## Taking Input
 
-- Using Stack
+### Using Stack
 
-- Using Queue
+### Using Queue
 
-### Binary Tree Traversals
+## Binary Tree Traversals
 
-- PreOrder
+### PreOrder
 
 <https://leetcode.com/problems/binary-tree-preorder-traversal/>
 
@@ -52,7 +51,7 @@ class Solution:
         return result
 ```
 
-- PostOrder
+### PostOrder
 
 ```python
 class Solution:
@@ -68,7 +67,7 @@ class Solution:
         return self.result
 ```
 
-- InOrder
+### InOrder
 
 ```python
 class Solution:
@@ -84,7 +83,7 @@ class Solution:
         return self.result
 ```
 
-- Level Order
+### Level Order
 
 1. We put our root into queue, now we have level 0 in our queue.
 2. On each step extract all nodes from queue and put their children to to opposite end of queue. In this way we will have full level in the end of each step and our queue will be filled with nodes from the next level.
@@ -109,7 +108,7 @@ class Solution:
         return result
 ```
 
-- Boundry Traversal
+### Boundry Traversal
 
 ```python
 class Solution:
@@ -157,7 +156,7 @@ class Solution:
         return self.result
 ```
 
-- ZigZag Traversal
+### ZigZag Traversal
 
 ```python
 class Solution:
@@ -184,3 +183,10 @@ class Solution:
                 side = True
         return result
 ```
+
+## Basic Questions
+
+- Height of Binary Tree
+- Diameter of Binary Tree
+- Replace Node with Width
+- 
