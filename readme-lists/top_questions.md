@@ -149,77 +149,6 @@
 - https://leetcode.com/problems/minimum-number-of-taps-to-open-to-water-a-garden/
 - https://leetcode.com/problems/create-maximum-number/
 
-## DFS
-
-### MEDIUM
-- https://leetcode.com/problems/letter-combinations-of-a-phone-number/
-- https://leetcode.com/problems/course-schedule-ii/
-- https://leetcode.com/problems/decode-string/
-- https://leetcode.com/problems/number-of-provinces/
-- https://leetcode.com/problems/clone-graph/
-- https://leetcode.com/problems/shortest-bridge/
-- https://leetcode.com/problems/all-paths-from-source-to-target/
-- https://leetcode.com/problems/surrounded-regions//
-- https://leetcode.com/problems/house-robber-iii/
-
-### HARD
-- https://leetcode.com/problems/critical-connections-in-a-network/
-- https://leetcode.com/problems/remove-invalid-parentheses/
-- https://leetcode.com/problems/longest-increasing-path-in-a-matrix/
-- https://leetcode.com/problems/concatenated-words/
-- https://leetcode.com/problems/making-a-large-island/
-- https://leetcode.com/problems/contain-virus/
-- https://leetcode.com/problems/24-game/
-- https://leetcode.com/problems/remove-boxes/
-
-## TREE
-
-### EASY
-- https://leetcode.com/problems/diameter-of-binary-tree/
-- https://leetcode.com/problems/invert-binary-tree/
-- https://leetcode.com/problems/subtree-of-another-tree/
-- https://leetcode.com/problems/range-sum-of-bst/
-- https://leetcode.com/problems/symmetric-tree/
-- https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
-- https://leetcode.com/problems/merge-two-binary-trees/
-- https://leetcode.com/problems/maximum-depth-of-binary-tree/
-- https://leetcode.com/problems/binary-tree-paths/
-- https://leetcode.com/problems/same-tree/
-- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
-- https://leetcode.com/problems/path-sum/
-- https://leetcode.com/problems/minimum-absolute-difference-in-bst/
-- https://leetcode.com/problems/sum-of-left-leaves/
-- https://leetcode.com/problems/balanced-binary-tree/
-- https://leetcode.com/problems/binary-tree-inorder-traversal/   (USING STACK TOO)
-
-### MEDIUM
-- https://leetcode.com/problems/count-good-nodes-in-binary-tree/
-- https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
-- https://leetcode.com/problems/binary-tree-right-side-view/
-- https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/
-- https://leetcode.com/problems/validate-binary-search-tree/
-- https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
-- https://leetcode.com/problems/binary-search-tree-iterator/
-- https://leetcode.com/problems/binary-tree-level-order-traversal/
-- https://leetcode.com/problems/path-sum-iii/
-- https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/
-- https://leetcode.com/problems/unique-binary-search-trees/
-- https://leetcode.com/problems/recover-binary-search-tree/
-- https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
-- https://leetcode.com/problems/flatten-binary-tree-to-linked-list/
-- https://leetcode.com/problems/maximum-width-of-binary-tree/
-- https://leetcode.com/problems/unique-binary-search-trees-ii/
-- https://leetcode.com/problems/kth-smallest-element-in-a-bst/
-- https://leetcode.com/problems/redundant-connection/
-
-### HARD
-- https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
-- https://leetcode.com/problems/binary-tree-maximum-path-sum/
-- https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
-- https://leetcode.com/problems/binary-tree-cameras/
-- https://leetcode.com/problems/sum-of-distances-in-tree/
-- https://leetcode.com/problems/number-of-ways-to-reconstruct-a-tree/
-- https://leetcode.com/problems/redundant-connection-ii/
 
 ## HASH TABLE
 
@@ -255,21 +184,6 @@
 - https://leetcode.com/problems/max-sum-of-rectangle-no-larger-than-k/
 - https://leetcode.com/problems/split-array-largest-sum/
 - https://leetcode.com/problems/shortest-subarray-with-sum-at-least-k/
-
-## BFS
-
-### MEDIUM
-- https://leetcode.com/problems/number-of-islands/
-- https://leetcode.com/problems/rotting-oranges/
-- https://leetcode.com/problems/snakes-and-ladders/
-- https://leetcode.com/problems/is-graph-bipartite/
-- https://leetcode.com/problems/minimum-jumps-to-reach-home/
-
-### HARD
-- https://leetcode.com/problems/word-ladder/
-- https://leetcode.com/problems/word-ladder-ii/
-- https://leetcode.com/problems/cut-off-trees-for-golf-event/
-- https://leetcode.com/problems/reachable-nodes-in-subdivided-graph/
 
 ## TWO POINTER
 
@@ -309,26 +223,7 @@
 - https://leetcode.com/problems/all-oone-data-structure/
 - https://leetcode.com/problems/design-browser-history/
 
-## GRAPH
-### EASY
-- https://leetcode.com/problems/employee-importance/
-- https://leetcode.com/problems/find-the-town-judge/
 
-### MEDIUM
-- https://leetcode.com/problems/evaluate-division/
-- https://leetcode.com/problems/accounts-merge/
-- https://leetcode.com/problems/network-delay-time/
-- https://leetcode.com/problems/find-eventual-safe-states/
-- https://leetcode.com/problems/keys-and-rooms/
-- https://leetcode.com/problems/possible-bipartition/
-- https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/
-- https://leetcode.com/problems/regions-cut-by-slashes/
-- https://leetcode.com/problems/satisfiability-of-equality-equations/
-- https://leetcode.com/problems/as-far-from-land-as-possible/
-- https://leetcode.com/problems/number-of-closed-islands/
-- https://leetcode.com/problems/number-of-operations-to-make-network-connected/
-- https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/
-- https://leetcode.com/problems/time-needed-to-inform-all-employees/
 
 ### BIT MANIPULATION
 - https://leetcode.com/problems/sum-of-two-integers/discuss/84278/A-summary%3A-how-to-use-bit-manipulation-to-solve-problems-easily-and-efficiently

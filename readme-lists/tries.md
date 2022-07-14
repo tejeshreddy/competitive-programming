@@ -50,6 +50,7 @@ class Tire:
 - https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
 
 ## Important Solutions
+
 https://leetcode.com/problems/word-search-ii/
 
 ```python
