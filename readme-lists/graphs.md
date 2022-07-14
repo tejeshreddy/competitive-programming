@@ -71,7 +71,8 @@ This question is an all paths from source to destination problem
 
 ### Minimum Spanning Tree
 
-Prims Algorithm
+#### Prims Algorithm
+
 <https://leetcode.com/problems/min-cost-to-connect-all-points>
 
 Space: O(V^2)
