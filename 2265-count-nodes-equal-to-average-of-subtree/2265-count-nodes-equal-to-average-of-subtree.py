@@ -5,36 +5,19 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def __init__(self):
-        self.count = 0
-        self.total = 0
-        self.result = 0
-        
-    def get_total(self, node):
-        if not node:
-            return
-        self.total += node.val
-        self.count += 1
-        self.get_total(node.left)
-        self.get_total(node.right)
-        
-    
-    def depth_first_search(self, node):
-        if not node:
-           return
-        self.count = 0
-        self.total = 0
-        
-        self.get_total(node)
-        if self.total // self.count == node.val:
-            self.result += 1
-        self.depth_first_search(node.left)
-        self.depth_first_search(node.right)
-        
-    
     def averageOfSubtree(self, root: Optional[TreeNode]) -> int:
-        self.depth_first_search(root)
-        return self.result
         
-            
-            
+        def dfs(node):
+            if not node:
+                return (0, 0, 0)
+            ans, children, total = 0, 1, node.val
+            for next_node in (node.left, node.right):
+                result = dfs(next_node)
+                ans += result[0]
+                children += result[1]
+                total += result[2]
+                
+            if total // children == node.val:
+                ans += 1
+            return (ans, children, total)
+        return dfs(root)[0]
