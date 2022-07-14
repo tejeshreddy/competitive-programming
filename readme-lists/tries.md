@@ -1,4 +1,5 @@
 # Trie
+
 Trie is a prefix tree (Naray Tree). A trie is used to store strings. A thing to note about Trie is that, all descendents of that node will have a common prefix.
 
 Trie Representation
@@ -39,19 +40,19 @@ class Tire:
         return True
 ```
 
-
 ## Problems
 
 ### Medium
-- https://leetcode.com/problems/implement-trie-prefix-tree/ - Done
-- https://leetcode.com/problems/map-sum-pairs/ - Done
-- https://leetcode.com/problems/replace-words/ - Done
-- https://leetcode.com/problems/word-search-ii/ - Done
-- https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+
+- <https://leetcode.com/problems/implement-trie-prefix-tree/> - Done
+- <https://leetcode.com/problems/map-sum-pairs/> - Done
+- <https://leetcode.com/problems/replace-words/> - Done
+- <https://leetcode.com/problems/word-search-ii/> - Done
+- <https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/>
 
 ## Important Solutions
 
-https://leetcode.com/problems/word-search-ii/
+<https://leetcode.com/problems/word-search-ii/>
 
 ```python
 class Node:
@@ -102,5 +103,5 @@ class Solution:
 ```
 
 ## Resources
-- https://leetcode.com/explore/learn/card/trie/
 
+- <https://leetcode.com/explore/learn/card/trie/>
