@@ -6,10 +6,13 @@ class Solution:
         
         while intervals:
             recent = intervals.pop(0)
+            
             if recent[0] <= result[-1][1]:
-                merge = result.pop()
-                recent = [min(recent[0], merge[0]), max(recent[1], merge[1])]
-            result.append(recent)
+                result[-1][1] = max(recent[1], result[-1][1])
+                # merge = result.pop()
+                # recent = [min(recent[0], merge[0]), max(recent[1], merge[1])]
+            else:
+                result.append(recent)
         return result
         
         
