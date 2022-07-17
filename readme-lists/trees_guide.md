@@ -319,6 +319,53 @@ class Solution:
         return root
 ```
 
+### Validate BST
+
+<https://leetcode.com/problems/validate-binary-search-tree/>
+
+```python
+class Solution:
+    def __init__(self):
+        self.nodes = []
+    
+    def inorder_traversal(self, node) -> None:
+        if not node:
+            return
+        self.inorder_traversal(node.left)
+        self.nodes.append(node.val)
+        self.inorder_traversal(node.right)
+    
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        self.inorder_traversal(root)
+        
+        # Edge case and prevent out of bound error
+        if len(self.nodes) == 1:
+            return True
+        
+        for i in range(1, len(self.nodes)):
+            if self.nodes[i] <= self.nodes[i - 1]:
+                return False
+        return True
+```
+
+DFS Approach
+
+```python
+class Solution:
+    
+    def depth_first_search(self, node, low, high) -> bool:
+        if not node:
+            return True
+        
+        if low < node.val < high:
+            return self.depth_first_search(node.left, low, node.val) and self.depth_first_search(node.right, node.val, high)
+        else:
+            return False
+        
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        return self.depth_first_search(root, float("-inf"), float("+inf"))
+```
+
 ## Construction of BST
 
 ### Construct BST From LevelOrder

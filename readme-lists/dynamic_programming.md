@@ -14,9 +14,9 @@
 - https://leetcode.com/problems/word-break/ -> Done
 - https://leetcode.com/problems/delete-and-earn/ -> Done
 - https://leetcode.com/problems/maximal-square/ -> Done
-- https://leetcode.com/problems/coin-change/
+- https://leetcode.com/problems/coin-change/ -> Done
 - https://leetcode.com/problems/maximum-product-subarray/
-- https://leetcode.com/problems/maximum-length-of-repeated-subarray/
+- https://leetcode.com/problems/maximum-length-of-repeated-subarray/ -> Done
 - https://leetcode.com/problems/palindromic-substrings/
 - https://leetcode.com/problems/house-robber/
 - https://leetcode.com/problems/continuous-subarray-sum/
