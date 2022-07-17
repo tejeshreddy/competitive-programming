@@ -1,13 +1,10 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
-        
-        
         current = set()
         l, r = 0, 0
         max_len = 0
         
         while r < len(s):
-            print(current)
             while s[r] in current:
                 current.remove(s[l])
                 l += 1
