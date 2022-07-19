@@ -9,7 +9,9 @@ class Solution:
                 if u == v:
                     return True
                 return any(dfs(nei, v) for nei in graph[u])
-                
+            else:
+                return False
+        
         
         for u, v in edges:
             visit = set()
