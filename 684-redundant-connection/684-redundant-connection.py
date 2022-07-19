@@ -1,22 +1,32 @@
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         
-        graph = collections.defaultdict(list)
+        parent = [i for i in range(len(edges) + 1)]
+        rank = [1] * (len(edges) + 1)
         
-        def dfs(u, v):
-            if u not in visit:
-                visit.add(u)
-                if u == v:
-                    return True
-                return any(dfs(nei, v) for nei in graph[u])
-            else:
+        
+        def find(n):
+            p = parent[n]
+            while parent[p] != p:
+                # parent[p] = parent[parent[p]]
+                p = parent[p]
+            return p
+        
+        def union(n1, n2):
+            p1, p2 = find(n1), find(n2)
+            
+            if p1 == p2:
                 return False
-        
+            
+            if rank[p1] > rank[p2]:
+                parent[p2] = p1
+                rank[p1] += rank[p2]
+            else:
+                parent[p1] = p2
+                rank[p2] += rank[p1]
+            return True
         
         for u, v in edges:
-            visit = set()
-            if u in graph and v in graph and dfs(u, v):
+            if not union(u, v):
                 return [u, v]
-            graph[u].append(v)
-            graph[v].append(u)
-        
+             
