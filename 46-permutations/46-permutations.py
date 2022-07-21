@@ -9,9 +9,9 @@ class Solution:
             n = nums.pop(0)
             perms = self.permute(nums)
             
-            for perm in perms:
-                perm.append(n)
+            for p in perms:
+                p.append(n)
             result.extend(perms)
             nums.append(n)
         return result
-        
+            
