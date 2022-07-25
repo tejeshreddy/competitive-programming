@@ -11,21 +11,15 @@ class Solution:
         def checkSame(root, subRoot):
             if not root and not subRoot:
                 return True
-
             if (not root and subRoot) or (not subRoot and root):
                 return False
-
             if root.val != subRoot.val:
                 return False
-
             return checkSame(root.left, subRoot.left) and checkSame(root.right, subRoot.right)
-        
-        
     
         def dfs(root):
             if not root:
                 return False
-
             if root.val == subRoot.val:
                 if checkSame(root, subRoot):
                     return True
