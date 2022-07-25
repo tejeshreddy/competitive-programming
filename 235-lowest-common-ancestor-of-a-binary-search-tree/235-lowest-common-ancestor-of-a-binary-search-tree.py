@@ -13,7 +13,7 @@ class Solution:
         while cur:
             if p.val < cur.val and q.val < cur.val:
                 cur = cur.left
-            elif q.val > cur.val and p.val > cur.val:
+            elif p.val > cur.val and q.val > cur.val:
                 cur = cur.right
             else:
                 return cur
