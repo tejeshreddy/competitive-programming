@@ -5,17 +5,23 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    
-    def depth_first_search(self, node, low, high) -> bool:
-        if not node:
-            return True
+    def __init__(self):
+        self.nodes = []
         
-        if low < node.val < high:
-            return self.depth_first_search(node.left, low, node.val) and self.depth_first_search(node.right, node.val, high)
-        else:
-            return False
-        
+    def inOrder(self, root):
+        if not root:
+            return
+        self.inOrder(root.left)
+        self.nodes.append(root.val)
+        self.inOrder(root.right)
     
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        return self.depth_first_search(root, float("-inf"), float("+inf"))
+        self.inOrder(root)
+        
+        for i in range(1, len(self.nodes)):
+            if self.nodes[i] <= self.nodes[i - 1]:
+                return False
+        
+        return True
+        
         
