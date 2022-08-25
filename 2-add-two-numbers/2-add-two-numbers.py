@@ -6,7 +6,7 @@
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
         
-        current = dummy = ListNode(0)
+        curnode = dummy = ListNode(0)
         carry = 0
         
         while l1 or l2:
@@ -17,14 +17,13 @@ class Solution:
             if l2:
                 total += l2.val
                 l2 = l2.next
-            
             carry, remainder = divmod(total, 10)
-            
-            current.next = ListNode(remainder)
-            current = current.next
-        
+            curnode.next = ListNode(remainder)
+            curnode = curnode.next
         if carry:
-            current.next = ListNode(carry)
+            curnode.next = ListNode(carry)
+        
         return dummy.next
+            
         
         
