@@ -6,6 +6,8 @@ class Solution:
         wordList.append(beginWord)
         hmap = collections.defaultdict(list)
         
+        # time: O(n * m ^ 2)
+        
         for word in wordList:
             for j in range(len(word)):
                 pattern = word[:j] + "*" + word[j + 1:]
@@ -15,6 +17,8 @@ class Solution:
         q = deque([beginWord])
         result = 1
         
+        # bfs section
+        # time: (n ^ 2 * m)
         while q:
             for _ in range(len(q)):
                 word = q.popleft()
