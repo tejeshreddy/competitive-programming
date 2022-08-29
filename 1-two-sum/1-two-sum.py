@@ -1,12 +1,10 @@
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        hmap = {}
-        k = target
-        for n in range(len(nums)):
-            if k - nums[n] in hmap:
-                return [hmap[k - nums[n]], n]
-            else:
-                hmap[nums[n]] = n
+        hmap = collections.defaultdict(int)
         
-                
+        for k, i in enumerate(nums):
+            if target - i in hmap:
+                return [k, hmap[target - i]]
+            else:
+                hmap[i] = k
         
