@@ -42,7 +42,6 @@ front_running_trades = []
 electronic_trades, broker_trades = [], []
 
 
-
 for trade in data:
     print(trade)
     date_string = trade[0] + " " + trade[1]
@@ -65,16 +64,6 @@ while broker_trades:
             print("\n")
 
 print(front_running_trades)
-    # while electronic_trades:
-    #     electronic_timestamp, electronic_trade = heappop(electronic_trades)
-
-    #     if broker_timestamp - electronic_timestamp <= 60:
-    #         if validate_trade(broker_trade, electronic_trade):
-    #             front_running_trades.append((broker_trade.trade_id, electronic_trade.trade_id))
-    #         else:
-    #             continue
-    #     else:
-    #         ele
 
 
 
