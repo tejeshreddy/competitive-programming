@@ -121,7 +121,7 @@ class Solution:
 
 Space: O(V^2)
 
-Time: O(E logV)
+Time: O(E logV). It is O(n ^ 2 log n) where n is the total nodes and log n is the heap implementation
 
 ```python
 from heapq import heappush, heappop
