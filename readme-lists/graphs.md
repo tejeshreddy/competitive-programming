@@ -161,7 +161,6 @@ class Solution:
         return res
 ```
 
-
 ## Union Find
 
 <https://leetcode.com/problems/redundant-connection/>
@@ -197,4 +196,36 @@ class Solution:
             if not union(u, v):
                 return [u, v]
 
+```
+
+## Other Topics
+
+### Number of Connected Components in an Undirected Graph
+
+- <https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/>
+
+```python
+class Solution:
+    def countComponents(self, n: int, edges: List[List[int]]) -> int:
+        graph = collections.defaultdict(list)
+        
+        for u, v in edges:
+            graph[u].append(v)
+            graph[v].append(u)
+        
+        visited = set()
+        
+        def dfs(i):
+            if i in visited:
+                return
+            visited.add(i)
+            for neigh in graph[i]:
+                dfs(neigh)
+
+        count = 0
+        for i in range(n):
+            if i not in visited:
+                count += 1
+                dfs(i)
+        return count    
 ```
