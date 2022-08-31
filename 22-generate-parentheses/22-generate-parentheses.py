@@ -1,31 +1,36 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        result = []
         
-        def valid(s):
+        self.result = []
+        def validate_parenthesis(s):
             stack = []
             for i in s:
                 if i == "(":
                     stack.append(i)
-                else:
+                elif i == ")":
                     if len(stack) > 0 and stack[-1] == "(":
                         stack.pop()
                     else:
-                        stack.append(i)
+                        return False
             return len(stack) == 0
-        
-        
-        def backtracking(s, o, c):
-            if o > n or c > n:
+
+        def dfs(s):
+            if len(s) > 2 * n:
                 return
-            if o == c and c == n and valid(s):
-                result.append(s)
+            elif len(s) == 2 * n and validate_parenthesis(s):
+                self.result.append(s)
                 return
-            backtracking(s + "(", o + 1, c)
-            backtracking(s + ")", o, c + 1)
+            dfs(s + "(")
+            dfs(s + ")")
+        dfs("")
+        return self.result
+                
+                
         
-        backtracking("", 0, 0)
-        return result
-            
-            
+        
+        
+        
+        
+        
+        
         
