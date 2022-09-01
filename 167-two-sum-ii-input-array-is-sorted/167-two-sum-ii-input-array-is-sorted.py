@@ -1,6 +1,5 @@
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
-        # Binary Search
         for i, n in enumerate(numbers):
             temp = target - n
             l, r = i + 1, len(numbers) - 1
@@ -13,5 +12,6 @@ class Solution:
                     l = mid + 1
                 else:
                     r = mid - 1
+        
         
         
