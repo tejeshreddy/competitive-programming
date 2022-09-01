@@ -8,19 +8,18 @@ class Node:
 
 class Solution:
     def cloneGraph(self, node: 'Node') -> 'Node':
-        old_to_new = {}
+        hmap = {}
         
         def dfs(node):
-            if node in old_to_new:
-                return old_to_new[node]
+            if node in hmap:
+                return hmap[node]
             
             copy = Node(node.val)
-            old_to_new[node] = copy
-            
+            hmap[node] = copy
             for neigh in node.neighbors:
                 copy.neighbors.append(dfs(neigh))
+            
             return copy
-        
         return dfs(node) if node else None
             
         
