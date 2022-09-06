@@ -13,10 +13,10 @@ class Solution:
             if (r, c) in hmap:
                 return hmap[(r, c)]
             
-            down = dfs(r + 1, c, hmap)
-            right = dfs(r, c + 1, hmap)
+            # down = dfs(r + 1, c, hmap)
+            # right = dfs(r, c + 1, hmap)
             
-            hmap[(r, c)] = down + right
+            hmap[(r, c)] = dfs(r + 1, c, hmap) + dfs(r, c + 1, hmap)
             return hmap[(r, c)]
         
         return dfs(0, 0, {})
