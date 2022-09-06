@@ -1,12 +1,10 @@
 class Solution:
     def exist(self, board: List[List[str]], word: str) -> bool:
         rows, cols = len(board), len(board[0])
-        # visited = set()
         
         def dfs(r, c, w):
             if w == "":
                 return True
-            
             if r < 0 or c < 0 or r >= rows or c >= cols or board[r][c] != w[0] or (r, c) in visited:
                 return False
             else:
@@ -16,8 +14,9 @@ class Solution:
                 return result
         
         for r in range(0, rows):
-            visited = set()
+            
             for c in range(0, cols):
+                visited = set()
                 if board[r][c] == word[0] and dfs(r, c, word):
                     return True
         return False
