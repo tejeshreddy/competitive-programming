@@ -8,17 +8,13 @@ class Solution:
         if not head:
             return None
         
-        prev = None
-        cur = head
-        nxt = cur.next
+        p, c, n = None, head, head.next
         
-        while nxt:
-            cur.next = prev
-            prev = cur
-            cur = nxt
-            nxt = nxt.next
-        cur.next = prev
-        return cur
-            
-        
+        while n:
+            c.next = p
+            p = c
+            c = n
+            n = n.next
+        c.next = p
+        return c
         
