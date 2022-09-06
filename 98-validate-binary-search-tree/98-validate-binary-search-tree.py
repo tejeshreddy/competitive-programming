@@ -7,21 +7,19 @@
 class Solution:
     def __init__(self):
         self.nodes = []
-        
-    def inOrder(self, root):
+    
+    def inorder(self, root):
         if not root:
             return
-        self.inOrder(root.left)
+        self.inorder(root.left)
         self.nodes.append(root.val)
-        self.inOrder(root.right)
+        self.inorder(root.right)
     
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        self.inOrder(root)
+        self.inorder(root)
         
-        for i in range(1, len(self.nodes)):
-            if self.nodes[i] <= self.nodes[i - 1]:
+        for n in range(1, len(self.nodes)):
+            if self.nodes[n] <= self.nodes[n - 1]:
                 return False
-        
         return True
-        
         
