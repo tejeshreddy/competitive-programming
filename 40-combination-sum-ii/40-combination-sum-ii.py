@@ -6,6 +6,7 @@ class Solution:
                 return
             if target == 0 and temp[:] not in result:
                 result.append(temp[:])
+                
             for i in range(start, end):
                 if i > start and candidates[i] == candidates[i - 1]:
                     continue
