@@ -1,9 +1,9 @@
 class Solution:
     def numDecodings(self, s: str) -> int:
-        if len(s) == 0 or s is None:
+        if s[0] == "0" or s is None:
             return 0
-
-        @lru_cache(maxsize=None)
+        
+        @lru_cache(None)
         def dfs(string):
             if len(string) > 0:
                 if string[0] == "0":
@@ -13,10 +13,12 @@ class Solution:
             
             if int(string[:2]) <= 26:
                 first = dfs(string[1:])
-                second = dfs(string[2:]) 
+                second = dfs(string[2:])
                 return first + second
             else:
                 return dfs(string[1:])
-
+        
         return dfs(s)
             
+        
+        

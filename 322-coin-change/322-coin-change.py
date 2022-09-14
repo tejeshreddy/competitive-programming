@@ -1,20 +1,20 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
+        
         if amount == 0:
             return 0
         
-        dp = [amount + 1] * (amount + 1)
-        dp[0] = 0
+        arr = [amount + 1] * (amount + 1)
+        arr[0] = 0
         
-        for a in range(amount + 1):
+        coins.sort()
+        
+        for i in range(len(arr)):
             for c in coins:
-                if a >= c and a - c >= 0:
-                    dp[a] = min(dp[a], 1 + dp[a - c])
-        return dp[-1] if dp[amount] != amount + 1 else -1
-                
-            
-        
-        
-        
-        
+                if c <= i:
+                    arr[i] = min(1 + arr[i - c], arr[i])
+                else:
+                    break
+
+        return arr[amount] if arr[amount] != amount + 1 else -1
         

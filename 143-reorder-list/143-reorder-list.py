@@ -13,21 +13,20 @@ class Solution:
         while cur:
             nodes.append(cur.val)
             cur = cur.next
-        
         l, r = 0, len(nodes) - 1
+        
         cur = head
         
         while l <= r:
             cur.val = nodes[l]
-            l += 1
             cur = cur.next
             
             if not cur:
                 break
                 
             cur.val = nodes[r]
-            r -= 1
             cur = cur.next
             
-            
+            l += 1
+            r -= 1
         
