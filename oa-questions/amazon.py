@@ -18,5 +18,28 @@ def power_three(a):
     return ans
 
             
-print(power_three([1, -1, 2, 3]))
-print(power_three([2, 1, 8]))
+# print(power_three([1, -1, 2, 3]))
+# print(power_three([2, 1, 8]))
+
+def question1(s: str) -> int:
+    visited = set()
+    result = 0
+
+    for char in s:
+        if len(visited) == 0:
+            visited.add(char)
+            result += 1
+        
+        elif char in visited:
+            visited = set(char)
+            result += 1
+        
+        else:
+            visited.add(char)
+
+    return result
+
+# print(question1("aabcdea"))
+# print(question1("aaabcdea"))
+
+
