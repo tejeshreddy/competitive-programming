@@ -3,27 +3,27 @@ class Solution:
         nums.sort()
         result = []
         
-        for i, a in enumerate(nums):
-            if i > 0 and a == nums[i - 1]:
+        for i in range(len(nums)):
+            if i> 0 and nums[i] == nums[i - 1]:
                 continue
-            
+                
+            first = nums[i]
             l, r = i + 1, len(nums) - 1
             
             while l < r:
-                three_sum = a + nums[l] + nums[r]
-                if three_sum < 0:
-                    l += 1
-                    
-                elif three_sum > 0:
+                total = first + nums[l] + nums[r]
+                if total > 0:
                     r -= 1
-                    
+                elif total < 0:
+                    l += 1
                 else:
-                    result.append([a, nums[l], nums[r]])
+                    result.append([first, nums[l], nums[r]])
                     l += 1
                     while nums[l] == nums[l - 1] and l < r:
                         l += 1
         return result
                     
                 
-        
+                
+                
         
