@@ -12,9 +12,9 @@ class Solution:
             
             if p + k < 10:
                 q.append(r + str(p + k))
-            if p - k >= 0:
+            if p - k >= 0 and k != 0:
                 q.append(r + str(p - k))
-        return list(set(result))
+        return result
                 
             
             
