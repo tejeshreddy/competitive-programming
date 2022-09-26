@@ -13,7 +13,7 @@ class Solution:
         def find(c):
             if parent.get(c) == None:
                 parent[c] = c
-                return c
+                # return c
             if parent[c] == c:
                 return c
             return find(parent[c])
