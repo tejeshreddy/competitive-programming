@@ -268,9 +268,9 @@ class Solution:
         return count    
 ```
 
-<p>
-https://leetcode.com/problems/shortest-path-to-get-food/
+- <https://leetcode.com/problems/shortest-path-to-get-food/>
 
+```text
 You are starving and you want to eat food as quickly as possible. You want to find the shortest path to arrive at any food cell.
 
 You are given an m x n character matrix, grid, of these different types of cells:
@@ -283,7 +283,6 @@ You can travel to any adjacent cell north, east, south, or west of your current 
 
 Return the length of the shortest path for you to reach any food cell. If there is no path for you to reach food, return -1.
 
-```
 Input: grid = [["X","X","X","X","X","X"],["X","*","O","O","O","X"],["X","O","O","#","O","X"],["X","X","X","X","X","X"]]
 Output: 3
 Explanation: It takes 3 steps to reach the food.
@@ -297,8 +296,6 @@ Output: 6
 
 Explanation: There can be multiple food cells. It only takes 6 steps to reach the bottom food.
 ```
-
-</p>
 
 ```python
 class Solution:
