@@ -102,30 +102,4 @@ class ShoppingCart:
             return True
         else:
             return False
-    
-
-    
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 
