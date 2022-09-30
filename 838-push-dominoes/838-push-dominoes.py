@@ -15,7 +15,7 @@ class Solution:
                     dom[i - 1] = "L"
 
             elif d == "R":
-                if i + 1 < len(dom) and dom[i + 1] == ".":
+                if i < len(dom) - 1 and dom[i + 1] == ".":
                     if i + 2 < len(dom) and dom[i + 2] == "L":
                         q.popleft()
                     else:
