@@ -4,6 +4,9 @@ class Solution:
         memo = {}
         
         def dp(d, t):
+            if t > d * k:
+                memo[d, t] = 0
+                return 0
             if d == 0:
                 return t == 0
             if t < 0:
