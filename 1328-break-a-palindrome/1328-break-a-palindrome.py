@@ -2,6 +2,7 @@ class Solution:
     def breakPalindrome(self, palindrome: str) -> str:
         if len(palindrome) == 1:
             return ""
+        
         def check(s):
             l, r = 0, len(s) - 1
             while l < r:
@@ -18,6 +19,7 @@ class Solution:
                 temp = palindrome[:i] + chr(ord("a") + j) + palindrome[i + 1: ]
                 if temp < smallest and not check(temp) :
                     smallest = temp
+        
         return smallest
         
         
