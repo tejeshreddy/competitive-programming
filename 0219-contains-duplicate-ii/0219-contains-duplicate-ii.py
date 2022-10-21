@@ -1,28 +1,9 @@
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        
         hmap = {}
-        for key, v in enumerate(nums):
-            hmap[v] = hmap.get(v, []) + [key]
         
-        for v in hmap.values():
-            for i in range(len(v) - 1):
-                if v[i + 1] - v[i] <= k:
-                    print(v[i + 1], v[i])
-                    return True
+        for key, value in enumerate(nums):
+            if value in hmap and key - hmap[value] <= k:
+                return True
+            hmap[value] = key
         return False
-        
-        
-                
-                
-                
-                
-                
-                
-        
-                
-            
-            
-                    
-        
-        
