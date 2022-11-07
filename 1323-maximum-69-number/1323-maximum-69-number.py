@@ -5,11 +5,10 @@ class Solution:
         
         for i in range(len(num)):
             if num[i] == "6":
-                index = i
+                num[i] = "9"
                 break
         
-        if index != -1:
-            num[index] = "9"
+        
         return int("".join(num))
     
             
