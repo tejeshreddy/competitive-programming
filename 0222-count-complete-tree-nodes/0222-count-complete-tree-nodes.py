@@ -7,14 +7,18 @@
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
         
-        vals = []
-        def dfs(root):
-            if not root:
-                return
-            vals.append(root.val)
-            dfs(root.left)
-            dfs(root.right)
+        if not root:
+            return 0
+        return 1 + self.countNodes(root.left) + self.countNodes(root.right)
         
-        dfs(root)
-        return len(vals)
+#         vals = []
+#         def dfs(root):
+#             if not root:
+#                 return
+#             vals.append(root.val)
+#             dfs(root.left)
+#             dfs(root.right)
+        
+#         dfs(root)
+        # return len(vals)
         
