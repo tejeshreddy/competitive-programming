@@ -1,25 +1,16 @@
 class Solution {
     public int arraySign(int[] nums) {
-        int negative = 0;
-        boolean zero = false;
+        int negativeNumbers = 0;
         
-        for (int i : nums) {
-            if (i == 0) {
-                zero = true;
+        for (int num : nums) {
+            if (num == 0) {
+                return 0;
             }
-            else if (i < 0) {
-                negative += 1;
+            if (num < 0) {
+                negativeNumbers += 1;
             }
         }
+        return negativeNumbers % 2 == 0 ? 1 : -1;
         
-        if (zero == true) {
-            return 0;
-        }
-        else if (negative % 2 == 1) {
-            return -1;
-        }
-        else {
-            return 1;
-        }
     }
 }
