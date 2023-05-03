@@ -1,5 +1,5 @@
 class Solution {
-    List<Integer> getElementsOnlyInFirstList(int[] nums1, int[] nums2) {
+    List<Integer> getElementsPresentInOneList(int[] nums1, int[] nums2) {
         Set<Integer> onlyInNums1 = new HashSet<> ();
         Set<Integer> existInNums2 = new HashSet<> ();
         
@@ -12,10 +12,12 @@ class Solution {
                 onlyInNums1.add(num);
             }
         }
+        
         return new ArrayList<>(onlyInNums1);
-    }
+    } 
+    
     
     public List<List<Integer>> findDifference(int[] nums1, int[] nums2) {
-        return Arrays.asList(getElementsOnlyInFirstList(nums1, nums2), getElementsOnlyInFirstList(nums2, nums1));
+        return Arrays.asList(getElementsPresentInOneList(nums1, nums2), getElementsPresentInOneList(nums2, nums1));
     }
 }
