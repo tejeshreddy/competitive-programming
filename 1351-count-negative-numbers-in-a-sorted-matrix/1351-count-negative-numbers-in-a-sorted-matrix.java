@@ -1,14 +1,22 @@
-class Solution:
-    def countNegatives(self, grid: List[List[int]]) -> int:
-        rows = len(grid)
-        cols = len(grid[0])
+class Solution {
+    public int countNegatives(int[][] grid) {
+        int n = grid[0].length;
+        int result = 0;
         
-        result = 0
-        for r in range(rows):
-            for c in range(cols):
-                if grid[r][c] < 0:
-                    result += cols - c
-                    break
-        return result
-                    
+        for (int[] row: grid) {
+            int left = 0, right = n - 1;
+            while (left <= right) {
+                int mid = (left + right) / 2;
+                if (row[mid] < 0) {
+                    right = mid - 1;
+                } 
+                else {
+                    left = mid + 1;
+                }
+            }
+            result += (n - left);
+        }
         
+        return result;
+    }
+}
