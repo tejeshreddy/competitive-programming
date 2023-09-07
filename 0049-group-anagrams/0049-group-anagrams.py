@@ -1,9 +1,13 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        hmap = collections.defaultdict(list)
-        for word in strs:
-            sorted_word = sorted(word)
-            hmap["".join(sorted_word)].append(word)
-        return hmap.values()
+        """
         
+        """
+        hmap = collections.defaultdict(list)
+        
+        for s in strs:
+            sorted_s = "".join(sorted(s))
+            hmap[sorted_s].append(s)
+        return list(hmap.values())
+            
         
