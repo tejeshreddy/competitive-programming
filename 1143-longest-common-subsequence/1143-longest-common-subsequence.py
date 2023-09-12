@@ -1,16 +1,21 @@
 class Solution:
     def longestCommonSubsequence(self, text1: str, text2: str) -> int:
-        rows = len(text1) + 1
-        cols = len(text2) + 1
-        result = 0
-        grid = [[0 for _ in range(cols)] for _ in range(rows)]
+        dp = [[0 for _ in range(len(text2) + 1)] for _ in range(len(text1) + 1)]
         
-        for r in range(rows - 2, -1, -1):
-            for c in range(cols - 2, -1, -1):
-                if text1[r] == text2[c]:
-                    grid[r][c] = 1 + grid[r + 1][c + 1] 
+        result = 0
+        
+        for t1 in range(1, len(text1) + 1):
+            for t2 in range(1, len(text2) + 1):
+                if text1[t1 - 1] == text2[t2 - 1]:
+                    dp[t1][t2] = max(dp[t1][t2], dp[t1 - 1][t2 - 1]) + 1
                 else:
-                    grid[r][c] = max(grid[r + 1][c], grid[r][c + 1])
-                result = max(grid[r][c], result)
+                    dp[t1][t2] = max(dp[t1 - 1][t2], dp[t1 - 1][t2 - 1], dp[t1][t2 - 1])
+                result = max(result, dp[t1][t2])
+        print(dp)
         return result
+                    
+                
+        
+        
+        
         
