@@ -1,37 +1,42 @@
 class TrieNode:
     def __init__(self):
-        self.children = collections.defaultdict(TrieNode)
-        self.eof = False
+        self.children = {}
+        self.eos = False
 
 class Trie:
 
     def __init__(self):
         self.root = TrieNode()
-
+        
     def insert(self, word: str) -> None:
         cur = self.root
-        for c in word:
-            cur = cur.children[c]
-        cur.eof = True
+        for ch in word:
+            if ch in cur.children:
+                cur = cur.children[ch]
+            else:
+                cur.children[ch] = TrieNode()
+                cur = cur.children[ch]
+        cur.eos = True
+                
 
     def search(self, word: str) -> bool:
         cur = self.root
-        for c in word:
-            if c in cur.children:
-                cur = cur.children[c]
+        for ch in word:
+            if ch in cur.children:
+                cur = cur.children[ch]
             else:
                 return False
-        return cur.eof
+        return cur.eos
+        
 
     def startsWith(self, prefix: str) -> bool:
         cur = self.root
-        for c in prefix:
-            if c in cur.children:
-                cur = cur.children[c]
+        for ch in prefix:
+            if ch in cur.children:
+                cur = cur.children[ch]
             else:
                 return False
         return True
-        
 
 
 # Your Trie object will be instantiated and called as such:
