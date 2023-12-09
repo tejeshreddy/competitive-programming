@@ -8,18 +8,17 @@ class Node:
 
 from typing import Optional
 class Solution:
+    def __init__(self):
+        self.visited = {}
+
+    def dfs(self, node):
+        if node in self.visited:
+            return self.visited[node]
+        copy_node = Node(node.val)
+        self.visited[node] = copy_node
+        for neigh in node.neighbors:
+            copy_node.neighbors.append(self.dfs(neigh))
+        return copy_node
+
     def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
-        hmap = {}
-        
-        def dfs(node):
-            if node in hmap:
-                return hmap[node]
-            
-            copy = Node(node.val)
-            hmap[node] = copy
-            for neigh in node.neighbors:
-                copy.neighbors.append(dfs(neigh))
-            return copy
-        
-        return dfs(node) if node else None
-        
+        return self.dfs(node) if node else None
