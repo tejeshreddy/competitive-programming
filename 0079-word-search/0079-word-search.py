@@ -20,7 +20,3 @@ class Solution:
                 if board[r][c] == word[0] and dfs(r, c, word):
                     return True
         return False
-                    
-                
-            
-            
