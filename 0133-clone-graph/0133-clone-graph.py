@@ -12,10 +12,10 @@ class Solution:
         self.visited = {}
 
     def dfs(self, node):
-        if node in self.visited:
-            return self.visited[node]
+        if node.val in self.visited:
+            return self.visited[node.val]
         copy_node = Node(node.val)
-        self.visited[node] = copy_node
+        self.visited[node.val] = copy_node
         for neigh in node.neighbors:
             copy_node.neighbors.append(self.dfs(neigh))
         return copy_node
