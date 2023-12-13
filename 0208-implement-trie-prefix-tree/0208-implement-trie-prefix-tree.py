@@ -7,36 +7,36 @@ class Trie:
 
     def __init__(self):
         self.root = TrieNode()
-        
+
     def insert(self, word: str) -> None:
-        cur = self.root
-        for ch in word:
-            if ch in cur.children:
-                cur = cur.children[ch]
-            else:
-                cur.children[ch] = TrieNode()
-                cur = cur.children[ch]
-        cur.eos = True
-                
+        current = self.root
+        for char in word:
+            if char not in current.children:
+                current.children[char] = TrieNode()
+            
+            current = current.children[char]
+        current.eos = True
 
     def search(self, word: str) -> bool:
-        cur = self.root
-        for ch in word:
-            if ch in cur.children:
-                cur = cur.children[ch]
+        current = self.root
+        for char in word:
+            if char in current.children:
+                current = current.children[char]
             else:
                 return False
-        return cur.eos
+        return current.eos
         
 
     def startsWith(self, prefix: str) -> bool:
-        cur = self.root
-        for ch in prefix:
-            if ch in cur.children:
-                cur = cur.children[ch]
+        current = self.root
+        
+        for char in prefix:
+            if char in current.children:
+                current = current.children[char]
             else:
                 return False
         return True
+        
 
 
 # Your Trie object will be instantiated and called as such:
